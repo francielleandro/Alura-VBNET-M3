@@ -5,12 +5,8 @@ Namespace Classes.Bibliotecas
 
         Private _totalBonificacao As Double
 
-        Public Sub Registrar(Gerente As Gerente)
-            _totalBonificacao += Gerente.GetBonificacao
-        End Sub
-
-        Public Sub Registrar(Diretor As Diretor)
-            _totalBonificacao += Diretor.GetBonificacao
+        Public Sub Registrar(Funcionario As Funcionario)
+            _totalBonificacao += Funcionario.GetBonificacao
         End Sub
 
         Public Function getBonificacao() As Double

@@ -1,10 +1,7 @@
 ﻿Namespace Classes.Funcionarios
     Public Class Gerente
+        Inherits Funcionario
 #Region "Property"
-
-        Public Property nome As String
-        Public Property cpf As String
-        Public Property salario As Double
 
 #End Region
 
@@ -13,7 +10,7 @@
 #End Region
 
 #Region "Functions"
-        Public Function GetBonificacao() As Double
+        Public Overrides Function GetBonificacao() As Double
             Return salario * 0.1
         End Function
 #End Region
