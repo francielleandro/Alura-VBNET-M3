@@ -11,7 +11,7 @@
 
 #Region "Functions"
         Public Overrides Function GetBonificacao() As Double
-            Return salario * 1
+            Return salario * 1 + MyBase.GetBonificacao
         End Function
 #End Region
     End Class
