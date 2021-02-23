@@ -1,4 +1,5 @@
-﻿Imports ByteBank.Classes.Funcionarios
+﻿Imports ByteBank.Classes.Bibliotecas
+Imports ByteBank.Classes.Funcionarios
 
 Public Class Frm_Principal
     Public Sub New()
@@ -13,10 +14,14 @@ Public Class Frm_Principal
     End Sub
 
     Private Sub Btn_Click_Click(sender As Object, e As EventArgs) Handles Btn_Click.Click
+        Dim gerenciadorBonificacao As New GerenciadorBonificacao
+
         Dim Carlos As New Diretor()
         Carlos.nome = "Carlos"
         Carlos.cpf = "524.445.434-00"
         Carlos.salario = 2000
+
+        gerenciadorBonificacao.Registrar(Carlos)
 
         Dim Bia As New Gerente()
         Bia.nome = "Bia"
@@ -29,12 +34,16 @@ Public Class Frm_Principal
         MsgBox("O sálario do " + Bia.nome + " é " + Bia.salario.ToString)
         MsgBox("A bonificação de " + Bia.nome + " é " + Bia.GetBonificacao.ToString)
 
+        gerenciadorBonificacao.Registrar(Bia)
+
         Dim totalBonificacao As Double
 
         totalBonificacao += Carlos.GetBonificacao
         totalBonificacao += Bia.GetBonificacao
 
-        MsgBox("O total da bonificação a ser pago é " + totalBonificacao.ToString)
+        MsgBox("O total da bonificação a ser pago é " + totalBonificacao.ToString _
+               + " o valor calculado pela biblioteca foi de " + gerenciadorBonificacao.getBonificacao.ToString)
+
     End Sub
 
 End Class
