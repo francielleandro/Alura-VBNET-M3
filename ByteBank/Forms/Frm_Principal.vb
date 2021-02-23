@@ -28,6 +28,13 @@ Public Class Frm_Principal
 
         MsgBox("O sálario do " + Bia.nome + " é " + Bia.salario.ToString)
         MsgBox("A bonificação de " + Bia.nome + " é " + Bia.GetBonificacao.ToString)
+
+        Dim totalBonificacao As Double
+
+        totalBonificacao += Carlos.GetBonificacao
+        totalBonificacao += Bia.GetBonificacao
+
+        MsgBox("O total da bonificação a ser pago é " + totalBonificacao.ToString)
     End Sub
 
 End Class
