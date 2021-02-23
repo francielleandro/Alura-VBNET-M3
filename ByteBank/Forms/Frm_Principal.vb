@@ -11,6 +11,8 @@ Public Class Frm_Principal
         Me.Text = "Principal"
         Lbl_Principal.Text = "Principal"
         Btn_Click.Text = "Clique aqui"
+        Btn_InstanciarFuncionario.Text = "Instancia funcionario"
+        Btn_getTotalFuncionario.Text = "Total de funcionarios"
     End Sub
 
     Private Sub Btn_Click_Click(sender As Object, e As EventArgs) Handles Btn_Click.Click
@@ -46,4 +48,12 @@ Public Class Frm_Principal
 
     End Sub
 
+    Private Sub Btn_InstanciarFuncionario_Click(sender As Object, e As EventArgs) Handles Btn_InstanciarFuncionario.Click
+        Dim funcionario As New Funcionario
+        MsgBox("Funcionario instanciado")
+    End Sub
+
+    Private Sub Btn_getTotalFuncionario_Click(sender As Object, e As EventArgs) Handles Btn_getTotalFuncionario.Click
+        MsgBox("O número total de funcionarios instanciados é de " + Funcionario.TotalDeFuncionario.ToString)
+    End Sub
 End Class
