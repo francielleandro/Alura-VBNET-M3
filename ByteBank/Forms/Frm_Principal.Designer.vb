@@ -26,6 +26,7 @@ Partial Class Frm_Principal
         Me.Btn_Click = New System.Windows.Forms.Button()
         Me.Btn_InstanciarFuncionario = New System.Windows.Forms.Button()
         Me.Btn_getTotalFuncionario = New System.Windows.Forms.Button()
+        Me.Btn_exibirSalarios = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Lbl_Principal
@@ -64,11 +65,21 @@ Partial Class Frm_Principal
         Me.Btn_getTotalFuncionario.Text = "Button1"
         Me.Btn_getTotalFuncionario.UseVisualStyleBackColor = True
         '
+        'Btn_exibirSalarios
+        '
+        Me.Btn_exibirSalarios.Location = New System.Drawing.Point(477, 41)
+        Me.Btn_exibirSalarios.Name = "Btn_exibirSalarios"
+        Me.Btn_exibirSalarios.Size = New System.Drawing.Size(108, 41)
+        Me.Btn_exibirSalarios.TabIndex = 4
+        Me.Btn_exibirSalarios.Text = "Button1"
+        Me.Btn_exibirSalarios.UseVisualStyleBackColor = True
+        '
         'Frm_Principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Btn_exibirSalarios)
         Me.Controls.Add(Me.Btn_getTotalFuncionario)
         Me.Controls.Add(Me.Btn_InstanciarFuncionario)
         Me.Controls.Add(Me.Btn_Click)
@@ -85,4 +96,5 @@ Partial Class Frm_Principal
     Friend WithEvents Btn_Click As Button
     Friend WithEvents Btn_InstanciarFuncionario As Button
     Friend WithEvents Btn_getTotalFuncionario As Button
+    Friend WithEvents Btn_exibirSalarios As Button
 End Class

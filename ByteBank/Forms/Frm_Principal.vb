@@ -13,20 +13,19 @@ Public Class Frm_Principal
         Btn_Click.Text = "Clique aqui"
         Btn_InstanciarFuncionario.Text = "Instancia funcionario"
         Btn_getTotalFuncionario.Text = "Total de funcionarios"
+        Btn_exibirSalarios.Text = "Exibir salarios de funcionarios"
     End Sub
 
     Private Sub Btn_Click_Click(sender As Object, e As EventArgs) Handles Btn_Click.Click
         Dim gerenciadorBonificacao As New GerenciadorBonificacao
 
-        Dim Carlos As New Diretor("524.445.434-00")
+        Dim Carlos As New Diretor("524.445.434-00", 3000)
         Carlos.nome = "Carlos"
-        Carlos.salario = 2000
 
         gerenciadorBonificacao.Registrar(Carlos)
 
-        Dim Bia As New Gerente("524.445.414-01")
+        Dim Bia As New Gerente("524.445.414-01", 2000)
         Bia.nome = "Bia"
-        Bia.salario = 2000
 
         MsgBox("O sálario do " + Carlos.nome + " é " + Carlos.salario.ToString)
         MsgBox("A bonificação de " + Carlos.nome + " é " + Carlos.GetBonificacao.ToString)
@@ -47,11 +46,26 @@ Public Class Frm_Principal
     End Sub
 
     Private Sub Btn_InstanciarFuncionario_Click(sender As Object, e As EventArgs) Handles Btn_InstanciarFuncionario.Click
-        Dim funcionario As New Funcionario("524.445.434-00")
+        Dim funcionario As New Funcionario("524.445.434-00", 1000)
         MsgBox("Funcionario instanciado")
     End Sub
 
     Private Sub Btn_getTotalFuncionario_Click(sender As Object, e As EventArgs) Handles Btn_getTotalFuncionario.Click
         MsgBox("O número total de funcionarios instanciados é de " + Funcionario.TotalDeFuncionario.ToString)
+    End Sub
+
+    Private Sub Btn_exibirSalarios_Click(sender As Object, e As EventArgs) Handles Btn_exibirSalarios.Click
+        Dim Carlos As New Diretor("524.445.434-00", 3000)
+        Carlos.nome = "Carlos"
+
+        Dim Bia As New Gerente("524.445.414-01", 2000)
+        Bia.nome = "Bia"
+
+        Dim Carolina As New Funcionario("212.123.125-24", 1000)
+        Bia.nome = "Carolina"
+
+        MsgBox("O salario atual do " + Carlos.nome + " é " + Carlos.salario.ToString)
+        Carlos.AumentarSalario(15)
+        MsgBox("Com aumento de 15% é " + Carlos.salario.ToString)
     End Sub
 End Class
