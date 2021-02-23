@@ -18,16 +18,14 @@ Public Class Frm_Principal
     Private Sub Btn_Click_Click(sender As Object, e As EventArgs) Handles Btn_Click.Click
         Dim gerenciadorBonificacao As New GerenciadorBonificacao
 
-        Dim Carlos As New Diretor()
+        Dim Carlos As New Diretor("524.445.434-00")
         Carlos.nome = "Carlos"
-        Carlos.cpf = "524.445.434-00"
         Carlos.salario = 2000
 
         gerenciadorBonificacao.Registrar(Carlos)
 
-        Dim Bia As New Gerente()
+        Dim Bia As New Gerente("524.445.414-01")
         Bia.nome = "Bia"
-        Bia.cpf = "524.445.414-01"
         Bia.salario = 2000
 
         MsgBox("O sálario do " + Carlos.nome + " é " + Carlos.salario.ToString)
@@ -49,7 +47,7 @@ Public Class Frm_Principal
     End Sub
 
     Private Sub Btn_InstanciarFuncionario_Click(sender As Object, e As EventArgs) Handles Btn_InstanciarFuncionario.Click
-        Dim funcionario As New Funcionario
+        Dim funcionario As New Funcionario("524.445.434-00")
         MsgBox("Funcionario instanciado")
     End Sub
 

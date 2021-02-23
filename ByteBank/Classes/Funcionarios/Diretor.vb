@@ -6,7 +6,9 @@
 #End Region
 
 #Region "Constructos"
-
+        Public Sub New(_cpf As String)
+            MyBase.New(_cpf)
+        End Sub
 #End Region
 
 #Region "Functions"
