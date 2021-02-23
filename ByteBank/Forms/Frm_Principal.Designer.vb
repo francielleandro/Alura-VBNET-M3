@@ -23,6 +23,7 @@ Partial Class Frm_Principal
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Lbl_Principal = New System.Windows.Forms.Label()
+        Me.Btn_Click = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Lbl_Principal
@@ -34,13 +35,23 @@ Partial Class Frm_Principal
         Me.Lbl_Principal.TabIndex = 0
         Me.Lbl_Principal.Text = "Label1"
         '
-        'Form1
+        'Btn_Click
+        '
+        Me.Btn_Click.Location = New System.Drawing.Point(15, 41)
+        Me.Btn_Click.Name = "Btn_Click"
+        Me.Btn_Click.Size = New System.Drawing.Size(111, 41)
+        Me.Btn_Click.TabIndex = 1
+        Me.Btn_Click.Text = "Button1"
+        Me.Btn_Click.UseVisualStyleBackColor = True
+        '
+        'Frm_Principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Btn_Click)
         Me.Controls.Add(Me.Lbl_Principal)
-        Me.Name = "Form1"
+        Me.Name = "Frm_Principal"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
         Me.ResumeLayout(False)
@@ -49,4 +60,5 @@ Partial Class Frm_Principal
     End Sub
 
     Friend WithEvents Lbl_Principal As Label
+    Friend WithEvents Btn_Click As Button
 End Class
