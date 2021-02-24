@@ -1,6 +1,6 @@
 ﻿Namespace Classes.Funcionarios
 
-    Public Class Funcionario
+    Public MustInherit Class Funcionario
 
 #Region "Property"
 
