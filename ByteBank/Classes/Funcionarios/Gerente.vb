@@ -15,6 +15,11 @@
         Public Overrides Function GetBonificacao() As Double
             Return salario * 0.5
         End Function
+
+
+        Public Overrides Sub AumentarSalario()
+            salario = salario * 1.1
+        End Sub
 #End Region
     End Class
 End Namespace

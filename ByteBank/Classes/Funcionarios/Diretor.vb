@@ -13,11 +13,11 @@
 
 #Region "Metodos"
         Public Overrides Function GetBonificacao() As Double
-            Return salario * 1 + MyBase.GetBonificacao
+            Return salario * 1.5
         End Function
 
-        Public Overrides Sub AumentarSalario(porcentagem As Double)
-            salario = salario * (1 + (porcentagem / 100))
+        Public Overrides Sub AumentarSalario()
+            salario = salario * 1.5
         End Sub
 #End Region
     End Class

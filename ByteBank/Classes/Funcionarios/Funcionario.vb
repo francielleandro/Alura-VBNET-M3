@@ -44,14 +44,9 @@
 #End Region
 
 #Region "Metodos"
-        Public Overridable Function GetBonificacao() As Double
-            Return salario * 0.1
-        End Function
+        Public MustOverride Function GetBonificacao() As Double
 
-        Public Overridable Sub AumentarSalario(porcentagem As Double)
-            m_salario = m_salario * (1 + (porcentagem / 100))
-        End Sub
-
+        Public MustOverride Sub AumentarSalario()
 
 #End Region
 

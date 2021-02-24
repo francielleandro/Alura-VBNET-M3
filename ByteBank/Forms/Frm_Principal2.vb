@@ -20,6 +20,7 @@ Public Class Frm_Principal2
         Dim Joao As New Designer("123.158.15-06", 3000)
         Dim Gabi As New Gerente("123.158.35-56", 4000)
         Dim Carla As New Auxiliar("133.128.15-56", 2000)
+        Dim Julia As New Desenvolvedor("143.108.15-56", 6000)
 
         TotalBonificacao.Registrar(Carlos)
         TotalBonificacao.Registrar(Joao)

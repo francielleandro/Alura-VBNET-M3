@@ -1,6 +1,7 @@
-﻿Namespace Classes.Funcionarios
+﻿
+Namespace Classes.Funcionarios
 
-    Public Class Auxiliar
+    Public Class Desenvolvedor
         Inherits Funcionario
 
 #Region "PROPRIEDADES"
@@ -14,11 +15,11 @@
 #End Region
 #Region "METODOS"
         Public Overrides Function GetBonificacao() As Double
-            Return salario * 0.2
+            Return salario * 0.5
         End Function
 
         Public Overrides Sub AumentarSalario()
-            salario = salario * 1.1
+            salario = salario * 1.4
         End Sub
 #End Region
 

@@ -46,7 +46,7 @@ Public Class Frm_Principal
     End Sub
 
     Private Sub Btn_InstanciarFuncionario_Click(sender As Object, e As EventArgs) Handles Btn_InstanciarFuncionario.Click
-        Dim funcionario As New Funcionario("524.445.434-00", 1000)
+        Dim funcionario As New Auxiliar("524.445.434-00", 1000)
         MsgBox("Funcionario instanciado")
     End Sub
 
@@ -61,11 +61,11 @@ Public Class Frm_Principal
         Dim Bia As New Gerente("524.445.414-01", 2000)
         Bia.nome = "Bia"
 
-        Dim Carolina As New Funcionario("212.123.125-24", 1000)
+        Dim Carolina As New Auxiliar("212.123.125-24", 1000)
         Bia.nome = "Carolina"
 
         MsgBox("O salario atual do " + Carlos.nome + " é " + Carlos.salario.ToString)
-        Carlos.AumentarSalario(15)
+        Carlos.AumentarSalario()
         MsgBox("Com aumento de 15% é " + Carlos.salario.ToString)
     End Sub
 End Class
