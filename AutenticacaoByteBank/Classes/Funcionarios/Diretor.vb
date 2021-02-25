@@ -1,6 +1,6 @@
 ﻿Namespace Classes.Funcionarios
     Public Class Diretor
-        Inherits Funcionario
+        Inherits FuncionarioAutenticavel
 #Region "Property"
 
 #End Region

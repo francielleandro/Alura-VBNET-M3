@@ -4,7 +4,7 @@ Namespace Classes.Bibliotecas
     Public Class SistemaInterno
 
 #Region "Metodos"
-        Public Function Logar(Funcionario As Funcionario, senhaTentativa As String)
+        Public Function Logar(Funcionario As FuncionarioAutenticavel, senhaTentativa As String)
             Dim vRetorno As Boolean
 
             vRetorno = Funcionario.Autenticar(senhaTentativa)

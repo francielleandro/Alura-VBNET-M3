@@ -29,7 +29,7 @@ Public Class Frm_Principal
         MsgBox("A tentativa de logar no sistema resultou em " + vLoga.ToString)
 
 
-        Dim Lucia As New Designer("123.456.189-10", 2000)
+        Dim Lucia As New Gerente("123.456.189-10", 2000)
         Lucia.senha = "12345"
         Lucia.nome = "Lucia"
 

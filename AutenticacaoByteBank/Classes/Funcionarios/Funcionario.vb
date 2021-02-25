@@ -32,8 +32,6 @@
             End Get
         End Property
 
-        Public Property senha As String
-
 #End Region
 
 #Region "Constructos"
@@ -49,15 +47,6 @@
         Public MustOverride Function GetBonificacao() As Double
 
         Public MustOverride Sub AumentarSalario()
-
-        Public Function Autenticar(senhaTentativa As String) As Boolean
-
-            If senha = senhaTentativa Then
-                Return True
-            End If
-            Return False
-
-        End Function
 
 #End Region
 
